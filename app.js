@@ -12,7 +12,7 @@ const staticPath = path.join(__dirname, '/public/');
 console.log('Serving static files from:', staticPath);
 app.use(express.static(staticPath));
 
-app.set('views', './src/views');
+app.set('views', path.join(__dirname, 'src/views'));
 app.set('view engine', 'ejs');
 
 const pricingRouter = require('./src/router/pricingsRouter');
@@ -22,6 +22,10 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
-app.listen(port, () => {
-    debug("Listening on port " + chalk.red(port));
-});
+if (require.main === module) {
+    app.listen(port, () => {
+        debug("Listening on port " + chalk.red(port));
+    });
+}
+
+module.exports = app;

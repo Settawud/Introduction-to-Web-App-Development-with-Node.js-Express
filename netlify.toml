@@ -1,2 +1,11 @@
 [build]
+  functions = "functions"
   publish = "public"
+
+[functions]
+  included_files = ["src/views/**/*.ejs", "data/*.json"]
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/api"
+  status = 200
