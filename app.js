@@ -12,8 +12,11 @@ const staticPath = path.join(__dirname, '/public/');
 console.log('Serving static files from:', staticPath);
 app.use(express.static(staticPath));
 
+// View Engine Setup
 app.set('views', path.join(__dirname, 'src/views'));
 app.set('view engine', 'ejs');
+// Explicitly register EJS to ensure bundler detects it
+app.engine('ejs', require('ejs').__express);
 
 const pricingRouter = require('./src/router/pricingsRouter');
 app.use('/pricings', pricingRouter);
