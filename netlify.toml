@@ -4,6 +4,7 @@
 
 [functions]
   included_files = ["src/views/**/*.ejs", "data/*.json"]
+  external_node_modules = ["ejs"]
 
 [[redirects]]
   from = "/*"
