@@ -1,0 +1,38 @@
+[
+    {
+        "id": "basic",
+        "level": "Basic",
+        "cost": "29.00",
+        "description": "เหมาะสำหรับผู้เริ่มต้นใช้งาน",
+        "features": [
+            "5 GB Storage",
+            "500 GB Bandwidth",
+            "2 Domains",
+            "1 User"
+        ]
+    },
+    {
+        "id": "standard",
+        "level": "Standard",
+        "cost": "59.00",
+        "description": "สำหรับธุรกิจขนาดเล็ก",
+        "features": [
+            "50 GB Storage",
+            "500 GB Bandwidth",
+            "10 Domains",
+            "5 Users"
+        ]
+    },
+    {
+        "id": "premium",
+        "level": "Premium",
+        "cost": "99.00",
+        "description": "สำหรับองค์กรขนาดใหญ่",
+        "features": [
+            "Unlimited Storage",
+            "Unlimited Bandwidth",
+            "Unlimited Domains",
+            "Unlimited Users"
+        ]
+    }
+]
